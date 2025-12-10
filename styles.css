@@ -1,0 +1,113 @@
+:root {
+    --primary-blue: #0d47a1;
+    --primary-blue-dark: #0b3a82;
+    --light-blue: #e3f2fd;
+    --dark-text: #333;
+    --card-shadow: rgba(0,0,0,0.08);
+}
+
+/* BODY */
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--dark-text);
+    background-color: #fafafa;
+    padding-top: 70px;
+}
+
+/* TITULOS */
+h1, h2, h3, .navbar-brand, .card-title {
+    font-family: 'Merriweather', serif;
+}
+
+/* NAVBAR */
+.navbar .nav-link {
+    font-weight: 600;
+    margin-left: 10px;
+    transition: color .3s;
+}
+
+.navbar .nav-link:hover {
+    color: var(--primary-blue);
+}
+
+/* HERO */
+.hero-section {
+    background: linear-gradient(rgba(13, 71, 161, 0.75), rgba(13, 71, 161, 0.75)),
+    url('https://images.unsplash.com/photo-1560518883-ce09059ee41f?q=80&w=1974&auto=format&fit=crop')
+    center/cover no-repeat;
+    
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    text-shadow: 0 2px 15px rgba(0,0,0,0.6);
+}
+
+/* BUTTONS */
+.btn-primary {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    padding: 12px 28px;
+    font-weight: bold;
+    transition: background-color .3s, transform .2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-blue-dark);
+    transform: translateY(-2px);
+}
+
+/* SERVICES */
+.service-card {
+    border: none;
+    border-radius: 12px;
+    padding: 25px;
+    transition: transform .3s, box-shadow .3s;
+    box-shadow: 0 4px 12px var(--card-shadow);
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.card-title {
+    color: var(--primary-blue);
+}
+
+/* SOBRE MÍ */
+#sobre-mi {
+    background-color: var(--light-blue);
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px var(--card-shadow);
+}
+
+/* CONTACTO */
+.contact-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.form-control:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 .25rem rgba(13, 71, 161, .25);
+}
+
+/* FOOTER */
+.footer-custom {
+    background-color: var(--primary-blue);
+}
+.hero-section {
+    background: linear-gradient(rgba(13, 71, 161, 0.75), rgba(13, 71, 161, 0.75)),
+                url('img/terreno.jpg') center/cover no-repeat;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    text-shadow: 0 2px 15px rgba(0,0,0,0.6);
+}
