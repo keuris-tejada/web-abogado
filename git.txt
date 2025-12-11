@@ -1,0 +1,8 @@
+cd "C:\ruta\de\tu\proyecto"
+1- git init
+
+2- git add .
+ 
+3- git commit -m "Primer commit: footer profesional con íconos"
+
+4- git push -u origin main
