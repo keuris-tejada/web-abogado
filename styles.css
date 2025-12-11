@@ -1,113 +1,233 @@
+/* ======================================================
+   PALETA & VARIABLES (Light + Dark Mode)
+====================================================== */
 :root {
-    --primary-blue: #0d47a1;
-    --primary-blue-dark: #0b3a82;
-    --light-blue: #e3f2fd;
-    --dark-text: #333;
-    --card-shadow: rgba(0,0,0,0.08);
+    --primary: #0d47a1;
+    --primary-dark: #083478;
+    --primary-light: #e8f1ff;
+    --text: #2a2a2a;
+    --text-soft: #555;
+    --bg: #fafafa;
+    --card-bg: #ffffff;
+    --shadow-sm: 0 4px 12px rgba(0,0,0,0.08);
+    --shadow-lg: 0 6px 22px rgba(0,0,0,0.14);
+    --transition: 0.3s ease;
 }
 
-/* BODY */
+/* Dark mode automático */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary: #4c8ef7;
+        --primary-dark: #3a6ac4;
+        --primary-light: #1c2738;
+        --text: #e6e6e6;
+        --text-soft: #bcbcbc;
+        --bg: #131722;
+        --card-bg: #1c2331;
+        --shadow-sm: 0 4px 12px rgba(0,0,0,0.3);
+        --shadow-lg: 0 8px 28px rgba(0,0,0,0.5);
+    }
+}
+
+/* ======================================================
+   GLOBAL
+====================================================== */
 body {
     font-family: 'Lato', sans-serif;
-    color: var(--dark-text);
-    background-color: #fafafa;
+    background: var(--bg);
+    color: var(--text);
     padding-top: 70px;
+    transition: background var(--transition), color var(--transition);
 }
 
-/* TITULOS */
 h1, h2, h3, .navbar-brand, .card-title {
     font-family: 'Merriweather', serif;
 }
 
-/* NAVBAR */
+/* ======================================================
+   NAVBAR
+====================================================== */
+.navbar {
+    background: var(--card-bg) !important;
+    transition: background var(--transition);
+}
+
 .navbar .nav-link {
     font-weight: 600;
-    margin-left: 10px;
-    transition: color .3s;
+    color: var(--text);
+    margin-left: 12px;
+    transition: color var(--transition);
 }
 
 .navbar .nav-link:hover {
-    color: var(--primary-blue);
+    color: var(--primary);
 }
 
-/* HERO */
+/* ======================================================
+   HERO SECTION PREMIUM
+====================================================== */
 .hero-section {
-    background: linear-gradient(rgba(13, 71, 161, 0.75), rgba(13, 71, 161, 0.75)),
-    url('https://images.unsplash.com/photo-1560518883-ce09059ee41f?q=80&w=1974&auto=format&fit=crop')
-    center/cover no-repeat;
-    
-    min-height: 85vh;
+    background: linear-gradient(rgba(13, 71, 161, 0.8), rgba(13, 71, 161, 0.8)),
+                url("img/terreno.jpg") center/cover no-repeat;
+    min-height: 88vh;
     display: flex;
     align-items: center;
-    text-shadow: 0 2px 15px rgba(0,0,0,0.6);
+    text-shadow: 0 3px 18px rgba(0,0,0,0.55);
 }
 
-/* BUTTONS */
+/* Texto del hero */
+.hero-section .display-3 {
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+/* ======================================================
+   BOTONES PREMIUM
+====================================================== */
+
 .btn-primary {
-    background-color: var(--primary-blue);
-    border-color: var(--primary-blue);
-    padding: 12px 28px;
-    font-weight: bold;
-    transition: background-color .3s, transform .2s;
+    background: var(--primary);
+    border-color: var(--primary);
+    padding: 14px 34px;
+    font-weight: 700;
+    border-radius: 8px;
+    letter-spacing: .5px;
+    transition: background var(--transition), transform .2s;
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-blue-dark);
-    transform: translateY(-2px);
+    background: var(--primary-dark);
+    transform: translateY(-3px);
 }
 
-/* SERVICES */
+/* Botón outlined blanco */
+.btn-outline-light {
+    border-width: 2px;
+    font-weight: 600;
+}
+
+.btn-outline-light:hover {
+    background: rgba(255,255,255,0.18);
+}
+
+/* ======================================================
+   TARJETAS DE SERVICIO PREMIUM
+====================================================== */
 .service-card {
     border: none;
-    border-radius: 12px;
-    padding: 25px;
-    transition: transform .3s, box-shadow .3s;
-    box-shadow: 0 4px 12px var(--card-shadow);
+    background: var(--card-bg);
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
 }
 
 .card-title {
-    color: var(--primary-blue);
+    color: var(--primary);
 }
 
-/* SOBRE MÍ */
+/* ======================================================
+   SOBRE MÍ
+====================================================== */
 #sobre-mi {
-    background-color: var(--light-blue);
+    background: var(--primary-light);
+    transition: background var(--transition);
 }
 
 .profile-photo {
+    width: 260px;
+    height: 260px;
+    aspect-ratio: 1/1;
     border-radius: 50%;
-    width: 270px;
-    height: 270px;
     object-fit: cover;
-    box-shadow: 0 4px 15px var(--card-shadow);
+    box-shadow: var(--shadow-lg);
 }
 
-/* CONTACTO */
+/* ======================================================
+   FORMULARIO DE CONTACTO
+====================================================== */
 .contact-card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    background: var(--card-bg);
+    border-radius: 14px;
+    box-shadow: var(--shadow-lg);
+    padding: 30px;
+    transition: background var(--transition);
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 12px;
 }
 
 .form-control:focus {
-    border-color: var(--primary-blue);
+    border-color: var(--primary);
     box-shadow: 0 0 0 .25rem rgba(13, 71, 161, .25);
 }
 
-/* FOOTER */
+/* ======================================================
+   FOOTER PREMIUM
+====================================================== */
 .footer-custom {
-    background-color: var(--primary-blue);
+    background: var(--primary-dark);
+    padding: 50px 0;
+    transition: background var(--transition);
 }
-.hero-section {
-    background: linear-gradient(rgba(13, 71, 161, 0.75), rgba(13, 71, 161, 0.75)),
-                url('img/terreno.jpg') center/cover no-repeat;
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    text-shadow: 0 2px 15px rgba(0,0,0,0.6);
+
+.footer-custom a {
+    transition: opacity var(--transition);
+}
+
+.footer-custom a:hover {
+    opacity: 0.75;
+}
+
+/* ======================================================
+   RESPONSIVE PRO
+====================================================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .display-3 {
+        font-size: 2.6rem;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+
+    .hero-section {
+        min-height: 70vh;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .display-3 {
+        font-size: 2.2rem !important;
+        line-height: 1.2;
+    }
+
+    .profile-photo {
+        width: 210px;
+        height: 210px;
+    }
+
+    .service-card {
+        padding: 22px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .display-3 {
+        font-size: 1.9rem !important;
+    }
+    .btn-primary {
+        width: 100%;
+        padding: 16px;
+    }
 }
