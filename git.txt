@@ -1,3 +1,5 @@
+subir nuevo cambio a git
+
 cd "C:\ruta\de\tu\proyecto"
 1- git init
 
@@ -6,3 +8,9 @@ cd "C:\ruta\de\tu\proyecto"
 3- git commit -m "Primer commit: footer profesional con íconos"
 
 4- git push -u origin main
+
+ver rama
+5-git branch
+
+descargar nuevo cambio
+6- git fetch origin main
