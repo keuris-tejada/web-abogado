@@ -69,10 +69,12 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-2">
     <div class="container">
+
+        <!-- Logo + Marca -->
         <a class="navbar-brand d-flex align-items-center" href="#inicio">
-            <svg width="36" height="36" viewBox="0 0 64 64" fill="none">
+            <svg width="36" height="36" viewBox="0 0 64 64" fill="none" aria-hidden="true">
                 <circle cx="32" cy="32" r="30" stroke="#0d47a1" stroke-width="4"/>
                 <path d="M20 42c4-6 4-14 0-20M44 42c-4-6-4-14 0-20" stroke="#0d47a1" stroke-width="4" stroke-linecap="round"/>
                 <path d="M26 24h12M26 32h12M26 40h12" stroke="#0d47a1" stroke-width="3" stroke-linecap="round"/>
@@ -81,20 +83,40 @@
             <span class="ms-2 fw-bold">Juan Pérez | Abogado</span>
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <!-- Botón móvil -->
+        <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation"
+        >
             <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Menú -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto fw-semibold">
-                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-                <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicios">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
             </ul>
         </div>
+
     </div>
 </nav>
+
 
 <!-- HERO -->
 <header id="inicio" class="hero-section text-white text-center d-flex align-items-center" style="background: linear-gradient(rgba(13, 71, 161, 0.75), rgba(13, 71, 161, 0.75)), url('img/terreno.jpg') center/cover no-repeat; min-height: 85vh;">

@@ -231,3 +231,25 @@ h1, h2, h3, .navbar-brand, .card-title {
         padding: 16px;
     }
 }
+.navbar {
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-link {
+    color: #0d47a1 !important;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.7;
+}
+
+.navbar-brand span {
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+}
+
+.navbar-toggler {
+    padding: 0.25rem;
+}
